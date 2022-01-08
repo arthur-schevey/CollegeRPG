@@ -655,6 +655,7 @@ script = ExtResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
+alpha_cut = 2
 texture = ExtResource( 1 )
 hframes = 60
 frame = 39

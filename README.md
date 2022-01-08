@@ -1,4 +1,4 @@
-# GIT Cheatsheet
+![Untitled](https://user-images.githubusercontent.com/20118856/148638632-0c3225cd-30a4-4dd1-85b8-1e50b9234c0e.png)
 
 ## Uploading to repository
 
