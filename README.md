@@ -29,6 +29,8 @@
 
 ## Downloading from repository
 
+`$ git pull <remote> main`
+
 `$ git pull origin main`
 
 <br>
