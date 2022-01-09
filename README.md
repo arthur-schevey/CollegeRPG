@@ -20,28 +20,32 @@
 
 **To push changes from PC to Github:**
 
-`$ git push -f <remote> <branch>`
+`$ git push <remote> <branch>`
 
-`$ git push -f origin main`
-###### *Hint:* 'Origin' is the name we gave our computer for the remote repository
+`$ git push origin main`
+###### *Hint:* 'Origin' is the name we gave our computer for the remote repository.
 
 <br>
 
 ## Downloading from repository
 
-`$ git pull <remote> main`
+`$ git pull <remote> <branch>`  
 
-`$ git pull origin main`
+`$ git pull origin main` **Your repository**
+
+`$ git pull upstream main`  **Parent/Original repository**
 
 <br>
 
 ## Initial setup
 
 `$ git init`
-###### *Hint:* Creates a local repository on your machine. Notice the hidden `.git` folder
+###### *Hint:* Creates a local repository on your machine. Notice the hidden `.git` folder.
 
 `$ git remote add origin https://github.com/<username>/<repository>.git`
-###### *Hint:* 'Origin' is now a shorthand for that remote repository link
+###### *Hint:* 'Origin' is now a shorthand for that remote repository link.
+
+`$ git remote add upstream https://github.com/arthur-schevey/CollegeRPG.git`
 
 <br>
 
@@ -49,3 +53,7 @@
 
 #### How do I see if my local repository is the same as the remote one?
 `$ git status` 
+#### How do I push changes if my local repository is behind the remote repo (fast-forward error)?
+`$ git pull origin <branch>` OR `$ git push -f origin <branch>` (forces a push)
+#### How do I see what remotes I have?
+`$ git remote -v`
