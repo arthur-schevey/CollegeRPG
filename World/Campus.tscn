@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/Ground.png" type="Texture" id=1]
 [ext_resource path="res://Player/3DPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/Starship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Enemies/Starship.gd" type="Script" id=5]
 [ext_resource path="res://Shaders/Clouds2D/CloudShadow.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ProceduralSky" id=6]
@@ -38,15 +37,30 @@ environment = SubResource( 3 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.921172, 0.232929, -0.311748, 0.095509, 0.641266, 0.761351, 0.377254, -0.73111, 0.56847, 0, 3.87753, 0 )
 shadow_enabled = true
+shadow_color = Color( 0.776471, 0.678431, 0.439216, 1 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Starship" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform( -0.0220697, 0, 0.0975342, 0, 0.1, 0, -0.0975342, 0, -0.0220697, 0, 0.0295615, 0 )
+
+[node name="Starship2" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform( -0.0906307, 0, -0.0422619, 0, 0.1, 0, 0.0422619, 0, -0.0906307, 1.37644, 0.0295615, 0 )
+
+[node name="Starship3" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform( -0.0857167, 0, 0.0515038, 0, 0.1, 0, -0.0515038, 0, -0.0857167, 0.619164, 0.0295615, -1.21147 )
+
+[node name="Starship4" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform( 0.083867, 0, 0.054464, 0, 0.1, 0, -0.054464, 0, 0.083867, 0, 0.0295615, 0.961935 )
+
+[node name="Starship5" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform( 0.0951056, 0, 0.0309017, 0, 0.1, 0, -0.0309017, 0, 0.0951056, -0.463246, 0.0295615, 0.420157 )
 
 [node name="3DPlayer" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580755, 0.233187, 0 )
 
-[node name="Starship" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.0220697, 0, 0.0975342, 0, 0.1, 0, -0.0975342, 0, -0.0220697, 0, 0.0295615, 0 )
-script = ExtResource( 5 )
-
 [node name="Plane" type="StaticBody" parent="."]
+collision_mask = 0
 
 [node name="MeshInstance" type="MeshInstance" parent="Plane"]
 transform = Transform( 20, 0, 0, 0, -8.74228e-07, 1, 0, -20, -4.37114e-08, 0, 0.0286651, 0 )
