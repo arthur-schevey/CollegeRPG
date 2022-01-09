@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World/Ground.png" type="Texture" id=1]
 [ext_resource path="res://Player/3DPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/Starship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/Starship.gd" type="Script" id=5]
+[ext_resource path="res://Shaders/Clouds2D/CloudShadow.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ProceduralSky" id=6]
 
@@ -10,8 +14,9 @@ background_mode = 2
 background_sky = SubResource( 6 )
 ambient_light_color = Color( 0.886275, 0.701961, 0.34902, 1 )
 ambient_light_sky_contribution = 0.5
-fog_color = Color( 0.501961, 0.6, 0.701961, 1 )
-fog_sun_color = Color( 1, 0.901961, 0.701961, 1 )
+fog_enabled = true
+fog_color = Color( 0.278431, 0.505882, 0.745098, 1 )
+fog_sun_color = Color( 0.698039, 0.537255, 0.207843, 1 )
 fog_depth_enabled = false
 tonemap_mode = 2
 ssao_intensity = 8.25
@@ -22,7 +27,8 @@ adjustment_enabled = true
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 1 )
 
-[sub_resource type="PlaneShape" id=5]
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 10, 1, 10 )
 
 [node name="Campus" type="Spatial"]
 
@@ -34,14 +40,26 @@ transform = Transform( 0.921172, 0.232929, -0.311748, 0.095509, 0.641266, 0.7613
 shadow_enabled = true
 
 [node name="3DPlayer" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.233187, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580755, 0.233187, 0 )
 
-[node name="StaticBody" type="StaticBody" parent="."]
+[node name="Starship" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.0220697, 0, 0.0975342, 0, 0.1, 0, -0.0975342, 0, -0.0220697, 0, 0.0295615, 0 )
+script = ExtResource( 5 )
 
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+[node name="Plane" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Plane"]
 transform = Transform( 20, 0, 0, 0, -8.74228e-07, 1, 0, -20, -4.37114e-08, 0, 0.0286651, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 5 )
+[node name="CollisionShape" type="CollisionShape" parent="Plane"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.933422, 0 )
+shape = SubResource( 7 )
+
+[node name="Tree" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95821, -1.90735e-06, 0.201358 )
+
+[node name="Clouds" parent="." instance=ExtResource( 6 )]
+transform = Transform( 20, 0, 0, 0, -8.74228e-07, 1, 0, -20, -4.37114e-08, 0, 1.86225, -0.322522 )
+cast_shadow = 3
