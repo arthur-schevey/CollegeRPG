@@ -3,29 +3,35 @@ extends Spatial
 var play
 var quit
 
+var anim = AnimationPlayer
+
 func _ready():
 	play = $"Menu Buttons/Play Model"
 	quit = $"Menu Buttons/Quit Model"
+	anim = $AnimationPlayer
 
 
 func _on_Play_Button_pressed():
-	get_tree().change_scene("res://World/Campus.tscn")
-
+	$ColorRect.visible = true
+	anim.play("Transition")
 
 func _on_Quit_Button_pressed():
 	get_tree().quit()
 
 func _on_Play_Button_mouse_entered():
-	play.scale.y = 0.3
-
-
+	anim.play("PlaySelect")
+	
+	
 func _on_Play_Button_mouse_exited():
-	play.scale.y = 0.09
-
-
+	anim.play("PlayDeselect")
+	
+	
 func _on_Quit_Button_mouse_entered():
-	quit.scale.y = 0.3
-
-
+	anim.play("QuitSelect")
+	
+	
 func _on_Quit_Button_mouse_exited():
-	quit.scale.y = 0.09
+	anim.play("QuitDeselect")
+
+func changeScene():
+	get_tree().change_scene("res://World/Campus.tscn")

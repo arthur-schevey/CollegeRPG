@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://UI/TitleArt.png" type="Texture" id=2]
@@ -64,6 +64,138 @@ extents = Vector3( 1.4, 1.25, 1.5 )
 
 [sub_resource type="StyleBoxEmpty" id=15]
 
+[sub_resource type="Animation" id=18]
+resource_name = "PlayDeselect"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu Buttons/Play Model:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.09, 0.3, 0.09 ), Vector3( 0.09, 0.09, 0.09 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "PlaySelect"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu Buttons/Play Model:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.09, 0.09, 0.09 ), Vector3( 0.09, 0.3, 0.09 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "QuitDeselect"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu Buttons/Quit Model:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.09, 0.3, 0.09 ), Vector3( 0.09, 0.09, 0.09 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "QuitSelect"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu Buttons/Quit Model:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.09, 0.09, 0.09 ), Vector3( 0.09, 0.3, 0.09 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Menu Buttons/Play Model:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.09, 0.09, 0.09 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Menu Buttons/Quit Model:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.09, 0.09, 0.09 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.984314, 1, 0.870588, 0 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "Transition"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.984314, 1, 0.870588, 0 ), Color( 1, 0.984314, 0.94902, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "changeScene"
+} ]
+}
+
 [node name="Menu" type="Spatial"]
 script = ExtResource( 1 )
 
@@ -75,6 +207,15 @@ margin_top = 6.0
 margin_right = 298.0
 margin_bottom = 106.0
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 480.0
+margin_bottom = 270.0
+color = Color( 0.984314, 1, 0.870588, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -202,7 +343,6 @@ collision_mask = 0
 script = ExtResource( 5 )
 
 [node name="starship" type="MeshInstance" parent="Starship2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 9 )
 material/0 = null
 
@@ -404,7 +544,7 @@ __meta__ = {
 }
 
 [node name="Play Model" type="MeshInstance" parent="Menu Buttons"]
-transform = Transform( 0.0528765, 0.041773, 0.0596581, 1.53845e-09, 0.0737237, -0.0516219, -0.0728291, 0.0303287, 0.0433139, -0.403, 0.026, -3.255 )
+transform = Transform( 0.0528765, 0.041773, 0.0596581, 1.53845e-09, 0.0737237, -0.0516218, -0.0728291, 0.0303287, 0.0433139, -0.403, 0.026, -3.255 )
 mesh = ExtResource( 18 )
 skeleton = NodePath("../..")
 material/0 = null
@@ -414,6 +554,14 @@ transform = Transform( 0.0527315, 0.0418333, 0.0597441, 0, 0.0737237, -0.0516219
 mesh = ExtResource( 19 )
 skeleton = NodePath("../..")
 material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/PlayDeselect = SubResource( 18 )
+anims/PlaySelect = SubResource( 16 )
+anims/QuitDeselect = SubResource( 19 )
+anims/QuitSelect = SubResource( 20 )
+anims/RESET = SubResource( 17 )
+anims/Transition = SubResource( 21 )
 
 [connection signal="area_entered" from="Starship/Hurtbox3D" to="Starship" method="_on_Hurtbox3D_area_entered"]
 [connection signal="area_entered" from="Starship2/Hurtbox3D" to="Starship2" method="_on_Hurtbox3D_area_entered"]
