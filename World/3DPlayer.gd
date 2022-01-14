@@ -8,7 +8,8 @@ export var ROLL_SPEED = 3
 enum {
 	MOVE,
 	ROLL,
-	ATTACK
+	ATTACK,
+	DIALOGUE
 }
 
 var state = MOVE
@@ -19,6 +20,7 @@ var roll_vector = Vector3.LEFT
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
+onready var dialogue = $Dialogue
 onready var animationState = animationTree.get("parameters/playback")
 
 func _ready():
@@ -32,6 +34,8 @@ func _physics_process(delta):
 			roll_state()
 		ATTACK:
 			attack_state()
+		DIALOGUE:
+			dialogue_state()
 	
 
 func move_state(delta):
@@ -59,6 +63,9 @@ func move_state(delta):
 #
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
+		
+	if dialogue.visible:
+		state = DIALOGUE
 
 func roll_state():
 	velocity = roll_vector * ROLL_SPEED
@@ -69,6 +76,10 @@ func attack_state():
 	velocity = Vector3.ZERO
 	animationState.travel("Attack")
 	
+func dialogue_state():
+	if !dialogue.visible:
+		state = MOVE
+	
 func move():
 	velocity = move_and_slide(velocity)
 	
@@ -77,3 +88,5 @@ func roll_animation_finished():
 #
 func attack_animation_finished():
 	state = MOVE
+	
+

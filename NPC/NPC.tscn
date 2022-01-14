@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://NPC/FrogGirlDialogue.png" type="Texture" id=1]
+[ext_resource path="res://NPC/FrogGirlSprite.png" type="Texture" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.075, 0.15, 0.12 )
+
+[node name="NPC" type="StaticBody"]
+
+[node name="Dialogue" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 41.0
+margin_top = 95.0
+margin_right = 285.0
+margin_bottom = 180.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 1, 1, 199, 139 )
+patch_margin_left = 96
+patch_margin_top = 78
+patch_margin_right = 55
+patch_margin_bottom = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite3D" parent="."]
+transform = Transform( 1.25, 0, 0, 0, 0.883883, 0.883883, 0, -0.883883, 0.883883, 0, 0, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )

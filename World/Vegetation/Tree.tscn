@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://World/tree.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://World/Vegetation/tree.vox" type="ArrayMesh" id=1]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.08, 0.2, 0.08 )

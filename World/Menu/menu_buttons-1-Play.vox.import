@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/menu_buttons-1-Play.vox-a91a11e1c3e270551589eb7d52e47337.mesh"
+
+[deps]
+
+source_file="res://World/Menu/menu_buttons-1-Play.vox"
+dest_files=[ "res://.import/menu_buttons-1-Play.vox-a91a11e1c3e270551589eb7d52e47337.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

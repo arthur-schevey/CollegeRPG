@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/13.vox-362ea188120e52c91334d31ea6252b51.mesh"
+
+[deps]
+
+source_file="res://World/Buildings/13.vox"
+dest_files=[ "res://.import/13.vox-362ea188120e52c91334d31ea6252b51.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
