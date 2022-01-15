@@ -1,10 +1,9 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://UI/TitleArt.png" type="Texture" id=2]
+[ext_resource path="res://World/Vegetation/rock1.vox" type="ArrayMesh" id=3]
 [ext_resource path="res://World/Ground.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Starship.gd" type="Script" id=5]
-[ext_resource path="res://Hitbox and Hurtbox/Hurtbox3D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Vegetation/Tree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/Buildings/5.vox" type="ArrayMesh" id=8]
 [ext_resource path="res://Enemies/starship.vox" type="ArrayMesh" id=9]
@@ -18,11 +17,12 @@
 [ext_resource path="res://World/Vegetation/Grass.tscn" type="PackedScene" id=17]
 [ext_resource path="res://World/Menu/menu_buttons-1-Play.vox" type="ArrayMesh" id=18]
 [ext_resource path="res://World/Menu/menu_buttons-0-Quit.vox" type="ArrayMesh" id=19]
+[ext_resource path="res://World/Particles/particles-single.png" type="Texture" id=20]
 
 [sub_resource type="ProceduralSky" id=9]
 sky_top_color = Color( 0.533333, 0.34902, 0.568627, 1 )
 sky_horizon_color = Color( 1, 0.831373, 0.611765, 1 )
-sky_curve = 0.136414
+sky_curve = 0.167945
 ground_bottom_color = Color( 1, 0.831373, 0.611765, 1 )
 ground_horizon_color = Color( 1, 0.643137, 0.541176, 1 )
 ground_curve = 0.034822
@@ -30,11 +30,12 @@ ground_curve = 0.034822
 [sub_resource type="Environment" id=10]
 background_mode = 2
 background_sky = SubResource( 9 )
-background_sky_custom_fov = 89.9
+background_sky_custom_fov = 87.1
 ambient_light_color = Color( 0.886275, 0.701961, 0.34902, 1 )
 ambient_light_energy = 1.5
 ambient_light_sky_contribution = 0.5
 fog_enabled = true
+fog_color = Color( 0.917969, 0.853872, 0.731506, 1 )
 fog_depth_begin = 4.0
 fog_depth_curve = 0.183011
 tonemap_mode = 2
@@ -52,12 +53,6 @@ extents = Vector3( 10, 1, 10 )
 [sub_resource type="BoxShape" id=12]
 extents = Vector3( 0.08, 0.2, 0.08 )
 
-[sub_resource type="BoxShape" id=13]
-extents = Vector3( 1.3, 1.5, 1.4 )
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 1.4, 1.25, 1.5 )
-
 [sub_resource type="QuadMesh" id=11]
 
 [sub_resource type="StyleBoxEmpty" id=14]
@@ -66,7 +61,7 @@ extents = Vector3( 1.4, 1.25, 1.5 )
 
 [sub_resource type="Animation" id=18]
 resource_name = "PlayDeselect"
-length = 0.1
+length = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu Buttons/Play Model:scale")
 tracks/0/interp = 1
@@ -74,7 +69,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0.09, 0.3, 0.09 ), Vector3( 0.09, 0.09, 0.09 ) ]
@@ -82,7 +77,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=16]
 resource_name = "PlaySelect"
-length = 0.1
+length = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu Buttons/Play Model:scale")
 tracks/0/interp = 1
@@ -90,7 +85,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0.09, 0.09, 0.09 ), Vector3( 0.09, 0.3, 0.09 ) ]
@@ -98,7 +93,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=19]
 resource_name = "QuitDeselect"
-length = 0.1
+length = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu Buttons/Quit Model:scale")
 tracks/0/interp = 1
@@ -106,7 +101,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0.09, 0.3, 0.09 ), Vector3( 0.09, 0.09, 0.09 ) ]
@@ -114,7 +109,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=20]
 resource_name = "QuitSelect"
-length = 0.1
+length = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Menu Buttons/Quit Model:scale")
 tracks/0/interp = 1
@@ -122,7 +117,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.05 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0.09, 0.09, 0.09 ), Vector3( 0.09, 0.3, 0.09 ) ]
@@ -166,6 +161,130 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 0.984314, 1, 0.870588, 0 ) ]
 }
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Starship2/starship:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Starship2/starship:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Starship2/starship:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Starship2/starship:translation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Starship2/starship:translation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Starship2/starship:translation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Robot1"
+length = 1.2
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Starship2/starship:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Starship2/starship:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Starship2/starship:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.6, 0.0168032, 1.2315, -0.5, 0.0170113, 0.3, 0.0113347 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Starship2/starship:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.4, 0.0111938, 0.534086, -0.25, 0, 0.25, 0, 0.000499192, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7, 1.2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Starship2/starship:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Starship2/starship:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=21]
 resource_name = "Transition"
@@ -195,6 +314,24 @@ tracks/1/keys = {
 "method": "changeScene"
 } ]
 }
+
+[sub_resource type="SpatialMaterial" id=22]
+flags_transparent = true
+flags_use_point_size = true
+vertex_color_use_as_albedo = true
+params_point_size = 10.0
+albedo_color = Color( 1, 0.894118, 0.780392, 1 )
+albedo_texture = ExtResource( 20 )
+
+[sub_resource type="PointMesh" id=23]
+material = SubResource( 22 )
+
+[sub_resource type="Curve" id=24]
+_data = [ Vector2( 0, 0.609091 ), 0.0, -6.77081, 0, 0, Vector2( 0.502809, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.994382, 0.427273 ), 4.28818, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=25]
+offsets = PoolRealArray( 0, 0.282282, 0.6997, 0.993994 )
+colors = PoolColorArray( 0.964706, 0.839216, 0.643137, 0, 0.964706, 0.835294, 0.631373, 1, 0.949601, 0.781326, 0.458392, 0.994444, 0.94902, 0.776471, 0.447059, 0 )
 
 [node name="Menu" type="Spatial"]
 script = ExtResource( 1 )
@@ -315,47 +452,20 @@ transform = Transform( 0.595576, -0.132136, 0.792357, 0.00458189, 0.986921, 0.16
 current = true
 fov = 63.5
 
-[node name="Starship" type="KinematicBody" parent="."]
-transform = Transform( 0.0604112, 0, -0.0796899, 0, 0.1, 0, 0.0796899, 0, 0.0604112, 0.0803562, 0.0295615, -3.93018 )
-collision_layer = 17
-collision_mask = 0
-script = ExtResource( 5 )
+[node name="Starship" type="Spatial" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.08, 0, -3.93 )
 
 [node name="starship" type="MeshInstance" parent="Starship"]
 mesh = ExtResource( 9 )
 material/0 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Starship"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046, 1.5, 0 )
-shape = SubResource( 13 )
-
-[node name="Hurtbox3D" parent="Starship" instance=ExtResource( 6 )]
-collision_layer = 8
-
-[node name="CollisionShape" parent="Starship/Hurtbox3D" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24501, 0 )
-shape = SubResource( 2 )
-
-[node name="Starship2" type="KinematicBody" parent="."]
-transform = Transform( -0.0220697, 0, 0.0975342, 0, 0.1, 0, -0.0975342, 0, -0.0220697, -0.470795, 0.0295615, -3.70196 )
-collision_layer = 17
-collision_mask = 0
-script = ExtResource( 5 )
+[node name="Starship2" type="Spatial" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.471, 0, -3.702 )
 
 [node name="starship" type="MeshInstance" parent="Starship2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 9 )
 material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Starship2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046, 1.5, 0 )
-shape = SubResource( 13 )
-
-[node name="Hurtbox3D" parent="Starship2" instance=ExtResource( 6 )]
-collision_layer = 8
-
-[node name="CollisionShape" parent="Starship2/Hurtbox3D" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24501, 0 )
-shape = SubResource( 2 )
 
 [node name="Buildings" type="MeshInstance" parent="."]
 transform = Transform( 0.026473, 0, 0.499299, 0, 0.5, 0, -0.499299, 0, 0.026473, -8.31034, -0.0515516, -3.67033 )
@@ -402,6 +512,7 @@ material/0 = null
 [node name="Clouds2" type="MeshInstance" parent="."]
 transform = Transform( -8.74228e-07, -20, 4.37114e-08, 0, -8.74228e-07, -1, 20, -8.74228e-07, 1.91069e-15, -2.09917, 1.85508, -6.27089 )
 material_override = ExtResource( 15 )
+cast_shadow = 0
 mesh = SubResource( 11 )
 material/0 = null
 
@@ -561,16 +672,51 @@ anims/PlaySelect = SubResource( 16 )
 anims/QuitDeselect = SubResource( 19 )
 anims/QuitSelect = SubResource( 20 )
 anims/RESET = SubResource( 17 )
+anims/Robot1 = SubResource( 26 )
 anims/Transition = SubResource( 21 )
 
-[connection signal="area_entered" from="Starship/Hurtbox3D" to="Starship" method="_on_Hurtbox3D_area_entered"]
-[connection signal="area_entered" from="Starship2/Hurtbox3D" to="Starship2" method="_on_Hurtbox3D_area_entered"]
+[node name="CPUParticles" type="CPUParticles" parent="."]
+transform = Transform( 0.0994546, 0, 0.0104303, 0, 0.1, 0, -0.0104303, 0, 0.0994546, -1.53796, -0.0185671, -4.34068 )
+amount = 200
+lifetime = 7.29
+preprocess = 2.0
+mesh = SubResource( 23 )
+emission_shape = 2
+emission_box_extents = Vector3( 30, 20, 30 )
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+scale_amount_random = 0.36
+scale_amount_curve = SubResource( 24 )
+color_ramp = SubResource( 25 )
+
+[node name="Rocks" type="MeshInstance" parent="."]
+transform = Transform( 0.00271191, 0, 0.0999632, 0, 0.1, 0, -0.0999632, 0, 0.00271191, -3.755, -0.0578003, -3.913 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Rocks2" type="MeshInstance" parent="Rocks"]
+transform = Transform( -0.105919, 0, 0.69194, 0, 0.7, 0, -0.69194, 0, -0.105919, 18.0084, 0, 0.940132 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="Rocks3" type="MeshInstance" parent="Rocks"]
+transform = Transform( 0.498384, 0, -0.0401866, 0, 0.5, 0, 0.0401866, 0, 0.498384, -1.66977, 0.303303, 27.2588 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="Rocks4" type="MeshInstance" parent="Rocks"]
+transform = Transform( 0.131236, 0, -0.991351, 0, 1, 0, 0.991351, 0, 0.131236, -11.9763, 0, 17.2655 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+material/0 = null
+
 [connection signal="mouse_entered" from="Menu Buttons/Play Button" to="." method="_on_Play_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Menu Buttons/Play Button" to="." method="_on_Play_Button_mouse_exited"]
 [connection signal="pressed" from="Menu Buttons/Play Button" to="." method="_on_Play_Button_pressed"]
 [connection signal="mouse_entered" from="Menu Buttons/Quit Button" to="." method="_on_Quit_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Menu Buttons/Quit Button" to="." method="_on_Quit_Button_mouse_exited"]
 [connection signal="pressed" from="Menu Buttons/Quit Button" to="." method="_on_Quit_Button_pressed"]
-
-[editable path="Starship/Hurtbox3D"]
-[editable path="Starship2/Hurtbox3D"]

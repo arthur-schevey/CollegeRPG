@@ -41,10 +41,10 @@ void fragment() {
 
 [resource]
 shader = SubResource( 8 )
-shader_param/isSoft = false
+shader_param/isSoft = true
 shader_param/speed = 0.005
 shader_param/brightness = 1.493
-shader_param/threshold = 0.204
+shader_param/threshold = 0.41
 shader_param/fluffiness = 0.158
-shader_param/opacity = 0.633
+shader_param/opacity = 0.657
 shader_param/noiseTexture = ExtResource( 1 )
