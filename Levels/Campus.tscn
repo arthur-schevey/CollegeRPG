@@ -1,0 +1,95 @@
+[gd_scene load_steps=15 format=3 uid="uid://d11ar6ikff8dt"]
+
+[ext_resource type="Script" path="res://Levels/Campus.gd" id="1_2rqdi"]
+[ext_resource type="PackedScene" uid="uid://cxr2wme6fewnt" path="res://Enemy/starship.tscn" id="4_mc8r6"]
+[ext_resource type="Texture2D" uid="uid://cn486gdo2uadr" path="res://QuadGround.png" id="5_mgwuc"]
+[ext_resource type="PackedScene" uid="uid://beo51o8nxrmeb" path="res://Player/3DPlayer.tscn" id="5_p7cn1"]
+[ext_resource type="PackedScene" path="res://NPC/Dialogue.tscn" id="6_el2dh"]
+[ext_resource type="PackedScene" uid="uid://kjstdntlyraj" path="res://SceneObjects/Tree.tscn" id="7_jhcib"]
+[ext_resource type="PackedScene" path="res://Shaders/Clouds2D/CloudShadow.tscn" id="8_0i7bx"]
+
+[sub_resource type="Sky" id="6"]
+
+[sub_resource type="Environment" id="3"]
+background_mode = 2
+sky = SubResource("6")
+ambient_light_color = Color(0.886275, 0.701961, 0.34902, 1)
+ambient_light_sky_contribution = 0.5
+tonemap_mode = 2
+ssao_intensity = 8.25
+fog_enabled = true
+adjustment_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3oyt"]
+albedo_texture = ExtResource("5_mgwuc")
+texture_filter = 4
+
+[sub_resource type="QuadMesh" id="1"]
+
+[sub_resource type="BoxShape3D" id="7"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrtie"]
+albedo_texture = ExtResource("5_mgwuc")
+
+[sub_resource type="QuadMesh" id="13"]
+
+[node name="Campus" type="Node3D"]
+script = ExtResource("1_2rqdi")
+speed = 100
+
+[node name="Post Processing" type="WorldEnvironment" parent="."]
+environment = SubResource("3")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.921505, 0.235161, -0.309075, 0.0946882, 0.635775, 0.766044, 0.376646, -0.73518, 0.563603, 0, 3.87753, 0)
+shadow_enabled = true
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Starship" parent="Enemies" instance=ExtResource("4_mc8r6")]
+transform = Transform3D(-0.0220697, 0, 0.0975342, 0, 0.1, 0, -0.0975342, 0, -0.0220697, 0, 0.0295615, -0.15656)
+
+[node name="Starship2" parent="Enemies" instance=ExtResource("4_mc8r6")]
+transform = Transform3D(-0.0906307, 0, -0.0422619, 0, 0.1, 0, 0.0422619, 0, -0.0906307, 1.37644, 0.0295615, 0)
+
+[node name="Starship3" parent="Enemies" instance=ExtResource("4_mc8r6")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 1.2389, 0.00653511, -3.13222)
+
+[node name="Starship4" parent="Enemies" instance=ExtResource("4_mc8r6")]
+transform = Transform3D(0.083867, 0, 0.054464, 0, 0.1, 0, -0.054464, 0, 0.083867, 0, 0.0295615, 0.961935)
+
+[node name="Starship5" parent="Enemies" instance=ExtResource("4_mc8r6")]
+transform = Transform3D(0.0951056, 0, 0.0309017, 0, 0.1, 0, -0.0309017, 0, 0.0951056, -0.463246, 0.0295615, 0.420157)
+
+[node name="3DPlayer" parent="." instance=ExtResource("5_p7cn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580755, 0.209955, 0)
+
+[node name="Dialogue" parent="3DPlayer" instance=ExtResource("6_el2dh")]
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+textSpeed = 0.1
+
+[node name="Plane" type="StaticBody3D" parent="."]
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Plane"]
+transform = Transform3D(20, 0, 0, 0, -1.74846e-06, 1, 0, -40, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_a3oyt")
+mesh = SubResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.933422, 0)
+shape = SubResource("7")
+
+[node name="Tree" parent="." instance=ExtResource("7_jhcib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95821, -1.90735e-06, 0.201358)
+
+[node name="Clouds" parent="." instance=ExtResource("8_0i7bx")]
+transform = Transform3D(20, 0, 0, 0, -8.74228e-07, 1, 0, -20, -4.37114e-08, -0.00295663, 1.85508, -0.32061)
+visible = false
+material_override = SubResource("StandardMaterial3D_hrtie")
+cast_shadow = 3
+mesh = SubResource("13")

@@ -13,7 +13,7 @@ enum {
 }
 
 var state = MOVE
-var velocity = Vector3.ZERO
+#var velocity = Vector3.ZERO
 var input_vector = Vector3.ZERO
 var ground_vector = Vector2(input_vector.x, input_vector.z)
 var roll_vector = Vector3.LEFT

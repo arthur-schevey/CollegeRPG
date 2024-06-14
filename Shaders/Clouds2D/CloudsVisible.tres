@@ -1,8 +1,8 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://2m6wyih7rwrg"]
 
 [ext_resource type="Texture2D" uid="uid://c0dqr4uecmfve" path="res://Shaders/Clouds2D/Portal_08.png" id="1"]
 
-[sub_resource type="Shader" id=8]
+[sub_resource type="Shader" id="8"]
 code = "shader_type spatial;
 render_mode depth_draw_opaque, unshaded;
 
@@ -40,11 +40,12 @@ void fragment() {
 }"
 
 [resource]
-shader = SubResource( 8 )
-shader_param/isSoft = true
-shader_param/speed = 0.005
-shader_param/brightness = 1.493
-shader_param/threshold = 0.41
-shader_param/fluffiness = 0.158
-shader_param/opacity = 0.657
-shader_param/noiseTexture = ExtResource( 1 )
+render_priority = 0
+shader = SubResource("8")
+shader_parameter/isSoft = true
+shader_parameter/speed = 0.005
+shader_parameter/brightness = 1.493
+shader_parameter/threshold = 0.41
+shader_parameter/fluffiness = 0.158
+shader_parameter/opacity = 0.657
+shader_parameter/noiseTexture = ExtResource("1")

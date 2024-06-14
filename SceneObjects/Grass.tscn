@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcvbxarnx5ju7"]
+
+[ext_resource type="ArrayMesh" uid="uid://d0vhbeecwe4vc" path="res://Vox/grass.vox" id="1"]
+
+[node name="Grass" type="Node3D"]
+
+[node name="grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = ExtResource("1")
