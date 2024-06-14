@@ -1,0 +1,5 @@
+[gd_resource type="FontFile" format=2]
+
+[resource]
+antialiased = false
+font_path = "res://Fonts/m5x7.ttf"

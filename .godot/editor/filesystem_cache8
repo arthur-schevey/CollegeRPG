@@ -1,0 +1,98 @@
+2a60927148abd1d33b818b535e306557
+::res://::1718389544
+dialogue.json::JSON::-1::1718389465::0::1::::<><>::
+Menu.gd::GDScript::-1::1718389488::0::1::::<>Node3D<>::
+README.md::TextFile::-1::1718389465::0::1::::<><>::
+Sun.tscn::PackedScene::-1::1718389488::0::1::::<><>::
+WorldEnvironment.gd::GDScript::-1::1718389488::0::1::::<>WorldEnvironment<>::
+WorldEnvironment.tscn::PackedScene::-1::1718389488::0::1::::<><>::
+::res://addons/::1718389509
+::res://Enemies/::0
+::res://Old/::1718389544
+::res://Old/Effects/::1718389516
+EnemyDeathEffect.png::CompressedTexture2D::6335032302267359232::1718389465::1718389516::1::::<><>::
+HitEffect.png::CompressedTexture2D::3447333537197130450::1718389465::1718389516::1::::<><>::
+::res://Old/Enemies/::1718389526
+Starship.gd::GDScript::-1::1718389489::0::1::::<>CharacterBody3D<>::
+Starship.tscn::PackedScene::-1::1718389526::0::1::::<><>::res://Enemies/starship.vox<>res://Old/Hitbox and Hurtbox/Hurtbox3D.tscn<>res://Old/Enemies/Starship.gd
+::res://Old/Fonts/::1718389524
+antiquity-print.ttf::FontFile::8292317642580348816::1718389465::1718389524::1::::<><>::
+m3x6.ttf::FontFile::807834704472384483::1718389465::1718389524::1::::<><>::
+m5x7.tres::FontFile::-1::1718389489::0::1::::<><>::
+m5x7.ttf::FontFile::930769012990353818::1718389465::1718389524::1::::<><>::
+m6x11.tres::FontFile::-1::1718389489::0::1::::<><>::
+m6x11.ttf::FontFile::3028332298233760001::1718389465::1718389524::1::::<><>::
+RUBBBB__.TTF::FontFile::1114965744371271316::1718389465::1718389524::1::::<><>::
+RUBBBI__.TTF::FontFile::67112029838712664::1718389465::1718389524::1::::<><>::
+::res://Old/Hitbox and Hurtbox/::1718389526
+Hitbox3D.gd::GDScript::-1::1718389489::0::1::::<>Area3D<>::
+Hitbox3D.tscn::PackedScene::-1::1718389526::0::1::::<><>::res://Old/Hitbox and Hurtbox/Hitbox3D.gd
+Hitbox.tscn::PackedScene::-1::1718389489::0::1::::<><>::
+Hurtbox3D.tscn::PackedScene::-1::1718389489::0::1::::<><>::
+Hurtbox.tscn::PackedScene::-1::1718389489::0::1::::<><>::
+::res://Old/Music and Sounds/::1718389530
+EnemyDie.wav::AudioStreamWAV::4270392055003720440::1718389465::1718389530::1::::<><>::
+Evade.wav::AudioStreamWAV::4699787517333624706::1718389465::1718389530::1::::<><>::
+Hit.wav::AudioStreamWAV::7741732146481832615::1718389465::1718389530::1::::<><>::
+Hurt.wav::AudioStreamWAV::9160324578949973798::1718389465::1718389530::1::::<><>::
+Menu Move.wav::AudioStreamWAV::4459291486858522129::1718389465::1718389530::1::::<><>::
+Menu Select.wav::AudioStreamWAV::1127082326109479243::1718389465::1718389530::1::::<><>::
+Music.mp3::AudioStreamMP3::374936163115037931::1718389465::1718389530::1::::<><>::
+Pause.wav::AudioStreamWAV::6215254297926996265::1718389465::1718389530::1::::<><>::
+Swipe.wav::AudioStreamWAV::1020656636350759288::1718389465::1718389530::1::::<><>::
+Unpause.wav::AudioStreamWAV::2367140989012207537::1718389465::1718389530::1::::<><>::
+::res://Old/NPC/::1718389531
+Dialogue.gd::GDScript::-1::1718389489::0::1::::<>Control<>::
+Dialogue.tscn::PackedScene::-1::1718389531::0::1::::<><>::uid://doyywg6dbgwkc<>res://Old/Fonts/m5x7.tres<>res://Old/Fonts/m6x11.tres<>uid://jbxh1h607bln<>res://Old/NPC/Dialogue.gd
+F.R.O.G.Happy.png::CompressedTexture2D::635174339751214647::1718389465::1718389531::1::::<><>::
+FrogGirlDialogue.png::CompressedTexture2D::8192947786568435982::1718389465::1718389531::1::::<><>::
+FrogGirlSprite.png::CompressedTexture2D::3854803050169294908::1718389465::1718389531::1::::<><>::
+NPC.tscn::PackedScene::-1::1718389531::0::1::::<><>::uid://doyywg6dbgwkc<>uid://bu6kbp00i5e4c
+::res://Old/Player/::1718389544
+3DPlayer.tscn::PackedScene::-1::1718389544::0::1::::<><>::uid://d3kfkyxy0taof<>res://Old/World/3DPlayer.gd<>res://Old/Hitbox and Hurtbox/Hitbox3D.tscn<>uid://cor316xbqlg0p<>uid://bofrprbn4d3fw<>uid://b63xdn8jh2ld7<>uid://u5h8r5fud6b5<>uid://cocb75233o0bp<>uid://1oj6du7nt427<>uid://drok8vhpu82lu<>uid://btnjkkntregta
+FrogGirlDialogue-Recovered-export.png::CompressedTexture2D::5626027012544326764::1718389465::1718389535::1::::<><>::
+Player.png::CompressedTexture2D::8924650544733808428::1718389465::1718389535::1::::<><>::
+::res://Old/Player/Sprites/::1718389535
+_down attack.png::CompressedTexture2D::1854413225629854738::1718389465::1718389535::1::::<><>::
+_down idle.png::CompressedTexture2D::9145516190603199817::1718389465::1718389535::1::::<><>::
+_down walk.png::CompressedTexture2D::3380446254252778232::1718389465::1718389535::1::::<><>::
+_pick up.png::CompressedTexture2D::1553513724379657869::1718389465::1718389535::1::::<><>::
+_side attack.png::CompressedTexture2D::8382040897122787422::1718389465::1718389535::1::::<><>::
+_side idle.png::CompressedTexture2D::4621479996002566874::1718389465::1718389535::1::::<><>::
+_side walk.png::CompressedTexture2D::1466193095025810356::1718389465::1718389535::1::::<><>::
+_up attack.png::CompressedTexture2D::3747410480694554990::1718389465::1718389535::1::::<><>::
+_up idle.png::CompressedTexture2D::5759733414944910213::1718389465::1718389535::1::::<><>::
+_up walk.png::CompressedTexture2D::5792327770398272945::1718389465::1718389535::1::::<><>::
+::res://Old/Shaders/::1718389465
+::res://Old/Shaders/Clouds2D/::1718389538
+CloudShadow.tscn::PackedScene::-1::1718389537::0::1::::<><>::res://Old/Shaders/Clouds2D/CloudsVisible.tscn
+CloudsVisible.tres::ShaderMaterial::-1::1718389537::0::1::::<><>::uid://c0dqr4uecmfve
+CloudsVisible.tscn::PackedScene::-1::1718389537::0::1::::<><>::res://Old/Shaders/Clouds2D/CloudsVisible.tres
+Portal_08.png::CompressedTexture2D::6534758976237972706::1718389465::1718389538::1::::<><>::
+::res://Old/Shadows/::1718389543
+LargeShadow.png::CompressedTexture2D::1141832699775864763::1718389465::1718389543::1::::<><>::
+MediumShadow.png::CompressedTexture2D::2106495995830856403::1718389465::1718389543::1::::<><>::
+SmallShadow.png::CompressedTexture2D::2288474740461885984::1718389465::1718389543::1::::<><>::
+::res://Old/UI/::1718389544
+HeartUIEmpty.png::CompressedTexture2D::8153391175476295267::1718389465::1718389541::1::::<><>::
+HeartUIFull.png::CompressedTexture2D::5821764208522672421::1718389465::1718389541::1::::<><>::
+Menu.tscn::PackedScene::-1::1718389544::0::1::::<><>::res://Menu.gd<>uid://ced3bov6f1ss2<>res://World/Vegetation/rock1.vox<>uid://c8v4qj21eyo68<>res://Old/World/Vegetation/Tree.tscn<>res://World/Buildings/5.vox<>res://Enemies/starship.vox<>res://World/Buildings/1.vox<>res://World/Buildings/3.vox<>res://World/Buildings/6.vox<>res://World/Buildings/7.vox<>res://World/Buildings/2.vox<>res://Old/Shaders/Clouds2D/CloudsVisible.tres<>res://World/Vegetation/tree.vox<>res://Old/World/Vegetation/Grass.tscn<>res://World/Menu/menu_buttons-1-Play.vox<>res://World/Menu/menu_buttons-0-Quit.vox<>uid://b5ace4fwd2ll3
+Play Button.gd::GDScript::-1::1718389489::0::1::::<>MeshInstance3D<>::
+TitleArt.png::CompressedTexture2D::5061492505975894791::1718389465::1718389541::1::::<><>::
+::res://Old/World/::1718389544
+3DPlayer.gd::GDScript::-1::1718389488::0::1::::<>CharacterBody3D<>::
+Campus.gd::GDScript::-1::1718389488::0::1::::<>Node3D<>::
+Campus.tscn::PackedScene::-1::1718389544::0::1::::<><>::uid://c8v4qj21eyo68<>res://Old/Player/3DPlayer.tscn<>res://Old/Enemies/Starship.tscn<>res://Old/World/Vegetation/Tree.tscn<>res://Old/World/Campus.gd<>res://Old/Shaders/Clouds2D/CloudShadow.tscn<>res://WorldEnvironment.tscn<>res://Sun.tscn<>res://Old/NPC/Dialogue.tscn<>res://Old/Shaders/Clouds2D/CloudsVisible.tres
+Ground.png::CompressedTexture2D::7134215021376729335::1718389465::1718389544::1::::<><>::
+::res://Old/World/Buildings/::1718389465
+::res://Old/World/Menu/::1718389465
+::res://Old/World/Particles/::1718389497
+particles-single.png::CompressedTexture2D::4492216101901064006::1718389465::1718389544::1::::<><>::
+texture.jpg::CompressedTexture2D::7171270394810798371::1718389465::1718389544::1::::<><>::
+::res://Old/World/Vegetation/::1718389465
+Grass.tscn::PackedScene::-1::1718389488::0::1::::<><>::res://World/Vegetation/grass.vox
+Tree.tscn::PackedScene::-1::1718389488::0::1::::<><>::res://World/Vegetation/tree.vox
+::res://World/::0
+::res://World/Buildings/::0
+::res://World/Menu/::0
+::res://World/Vegetation/::0
