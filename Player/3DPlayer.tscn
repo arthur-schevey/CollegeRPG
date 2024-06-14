@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3kfkyxy0taof" path="res://Player/Sprites/_down idle.png" id="1"]
 [ext_resource type="Script" path="res://Player/3DPlayer.gd" id="2"]
-[ext_resource type="PackedScene" path="res://Hitbox and Hurtbox/Hitbox3D.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bixfj0x6wngex" path="res://Hitbox and Hurtbox/Hitbox3D.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://cor316xbqlg0p" path="res://Player/Sprites/_up walk.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bofrprbn4d3fw" path="res://Player/Sprites/_down walk.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://b63xdn8jh2ld7" path="res://Player/Sprites/_side idle.png" id="6"]
@@ -1092,6 +1092,9 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hbw5b")
+}
 tree_root = SubResource("83")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Attack/blend_position = Vector2(0, 0)

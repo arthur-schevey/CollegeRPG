@@ -1,6 +1,15 @@
-res://Main Menu/Menu.tscn
-res://Shaders/Clouds2D/CloudsVisible.tres
+res://Enemy/starship.tscn
+res://Hitbox and Hurtbox/Hitbox3D.tscn
+res://Hitbox and Hurtbox/Hitbox.tscn
+res://Hitbox and Hurtbox/Hurtbox3D.tscn
+res://Hitbox and Hurtbox/Hurtbox.tscn
 res://Levels/Campus.tscn
-res://Player/3DPlayer.tscn
+res://Main Menu/Menu.tscn
 res://NPC/Dialogue.tscn
-res://NPC/Dialogue.gd
+res://NPC/NPC.tscn
+res://Player/3DPlayer.tscn
+res://SceneObjects/Grass.tscn
+res://SceneObjects/Tree.tscn
+res://Shaders/Clouds2D/CloudShadow.tscn
+res://Shaders/Clouds2D/CloudsVisible.tscn
+res://Shaders/Clouds2D/CloudsVisible.tres
