@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cxr2wme6fewnt" path="res://Enemy/starship.tscn" id="4_mc8r6"]
 [ext_resource type="Texture2D" uid="uid://cn486gdo2uadr" path="res://QuadGround.png" id="5_mgwuc"]
 [ext_resource type="PackedScene" uid="uid://beo51o8nxrmeb" path="res://Player/3DPlayer.tscn" id="5_p7cn1"]
-[ext_resource type="PackedScene" path="res://NPC/Dialogue.tscn" id="6_el2dh"]
+[ext_resource type="PackedScene" uid="uid://dhfxyn344cap0" path="res://NPC/Dialogue.tscn" id="6_el2dh"]
 [ext_resource type="PackedScene" uid="uid://kjstdntlyraj" path="res://SceneObjects/Tree.tscn" id="7_jhcib"]
 [ext_resource type="PackedScene" path="res://Shaders/Clouds2D/CloudShadow.tscn" id="8_0i7bx"]
 

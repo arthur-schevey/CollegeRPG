@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://beo51o8nxrmeb"]
+[gd_scene load_steps=59 format=3 uid="uid://beo51o8nxrmeb"]
 
 [ext_resource type="Texture2D" uid="uid://d3kfkyxy0taof" path="res://Player/Sprites/_down idle.png" id="1"]
 [ext_resource type="Script" path="res://Player/3DPlayer.gd" id="2"]
@@ -1055,8 +1055,6 @@ states/Run/position = Vector2(180.713, 117)
 transitions = ["Idle", "Run", SubResource("22"), "Run", "Idle", SubResource("23"), "Idle", "Attack", SubResource("35"), "Attack", "Idle", SubResource("36"), "Roll", "Idle", SubResource("47"), "Idle", "Roll", SubResource("48")]
 graph_offset = Vector2(-519.287, -25.089)
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="84"]
-
 [sub_resource type="CapsuleShape3D" id="85"]
 radius = 0.05
 height = 0.1
@@ -1096,7 +1094,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("83")
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource("84")
 parameters/Attack/blend_position = Vector2(0, 0)
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Roll/blend_position = Vector2(0, 0)

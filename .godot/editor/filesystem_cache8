@@ -1,36 +1,36 @@
-5caddac86b3e1071165af989a562786e
-::res://::1718396488
+7555aeb530264b75188b2fe7cefa125f
+::res://::1718400115
 QuadGround.png::CompressedTexture2D::5747222630368179015::1718391622::1718391622::1::::<><>::
 README.md::TextFile::-1::1718389465::0::1::::<><>::
-::res://addons/::1718390259
-::res://addons/MagicaVoxel_Importer_with_Extensions/::1718390260
-CulledMeshGenerator.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-Faces.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-framed_mesh_instance.gd::GDScript::-1::1718390259::0::1::::<>MeshInstance3D<>::
-framed_mesh_instance.png::CompressedTexture2D::6564047989194524463::1718390259::1718390260::1::::<><>::
-GreedyMeshGenerator.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-plugin.cfg::TextFile::-1::1718390259::0::1::::<><>::
-plugin.gd::GDScript::-1::1718390259::0::1::::<>EditorPlugin<>::
-vox-importer-common.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-vox-importer-mesh.gd::GDScript::-1::1718390259::0::1::::<>EditorImportPlugin<>::
-vox-importer-meshLibrary.gd::GDScript::-1::1718390259::0::1::::<>EditorImportPlugin<>::
-VoxFile.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-::res://addons/MagicaVoxel_Importer_with_Extensions/Metadata/::1718390382
-README.md::TextFile::-1::1718390259::0::1::::<><>::
-vox-icon.png::CompressedTexture2D::5593863761731793000::1718390259::1718390260::1::::<><>::
-vox-icon.vox::Mesh::175943390954084926::1718390259::1718390382::1::::<><>::
-::res://addons/MagicaVoxel_Importer_with_Extensions/VoxFormat/::1718390259
-Model.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-VoxData.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-VoxLayer.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-VoxMaterial.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
-VoxNode.gd::GDScript::-1::1718390259::0::1::::<>RefCounted<>::
+::res://addons/::1718399915
+::res://addons/MagicaVoxel_Importer_with_Extensions/::1718400090
+CulledMeshGenerator.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+Faces.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+framed_mesh_instance.gd::GDScript::-1::1718399823::0::1::::<>MeshInstance3D<>::
+framed_mesh_instance.png::CompressedTexture2D::3419671966927508677::1718399823::1718400090::1::::<><>::
+GreedyMeshGenerator.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+plugin.cfg::TextFile::-1::1718399823::0::1::::<><>::
+plugin.gd::GDScript::-1::1718399823::0::1::::<>EditorPlugin<>::
+vox-importer-common.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+vox-importer-mesh.gd::GDScript::-1::1718399823::0::1::::<>EditorImportPlugin<>::
+vox-importer-meshLibrary.gd::GDScript::-1::1718399823::0::1::::<>EditorImportPlugin<>::
+VoxFile.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+::res://addons/MagicaVoxel_Importer_with_Extensions/Metadata/::1718400093
+README.md::TextFile::-1::1718399823::0::1::::<><>::
+vox-icon.png::CompressedTexture2D::5250671654911573387::1718399823::1718400091::1::::<><>::
+vox-icon.vox::Mesh::4689219616311742579::1718399823::1718400093::1::::<><>::
+::res://addons/MagicaVoxel_Importer_with_Extensions/VoxFormat/::1718399823
+Model.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+VoxData.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+VoxLayer.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+VoxMaterial.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
+VoxNode.gd::GDScript::-1::1718399823::0::1::::<>RefCounted<>::
 ::res://Effects/::1718390230
 EnemyDeathEffect.png::CompressedTexture2D::6335032302267359232::1718389465::1718390230::1::::<><>::
 HitEffect.png::CompressedTexture2D::3447333537197130450::1718389465::1718390230::1::::<><>::
-::res://Enemy/::1718391182
+::res://Enemy/::1718399823
 starship.gd::GDScript::-1::1718389489::0::1::::<>CharacterBody3D<>::
-starship.tscn::PackedScene::6423958477025347701::1718391182::0::1::::<><>::res://Hitbox and Hurtbox/Hurtbox3D.tscn<>uid://08hi4ibybgpw<>res://Enemy/starship.gd
+starship.tscn::PackedScene::6423958477025347701::1718399823::0::1::::<><>::res://Hitbox and Hurtbox/Hurtbox3D.tscn<>uid://08hi4ibybgpw<>res://Enemy/starship.gd
 ::res://Fonts/::1718390230
 antiquity-print.ttf::FontFile::8292317642580348816::1718389465::1718390230::1::::<><>::
 m3x6.ttf::FontFile::807834704472384483::1718389465::1718390230::1::::<><>::
@@ -40,18 +40,18 @@ m6x11.tres::FontFile::-1::1718389489::0::1::::<><>::
 m6x11.ttf::FontFile::3028332298233760001::1718389465::1718390230::1::::<><>::
 RUBBBB__.TTF::FontFile::1114965744371271316::1718389465::1718390230::1::::<><>::
 RUBBBI__.TTF::FontFile::67112029838712664::1718389465::1718390230::1::::<><>::
-::res://Hitbox and Hurtbox/::1718390230
+::res://Hitbox and Hurtbox/::1718399823
 Hitbox3D.gd::GDScript::-1::1718389489::0::1::::<>Area3D<>::
-Hitbox3D.tscn::PackedScene::-1::1718390230::0::1::::<><>::res://Hitbox and Hurtbox/Hitbox3D.gd
-Hitbox.tscn::PackedScene::-1::1718389489::0::1::::<><>::
-Hurtbox3D.tscn::PackedScene::-1::1718389489::0::1::::<><>::
-Hurtbox.tscn::PackedScene::-1::1718389489::0::1::::<><>::
-::res://Levels/::1718396339
+Hitbox3D.tscn::PackedScene::-1::1718399823::0::1::::<><>::res://Hitbox and Hurtbox/Hitbox3D.gd
+Hitbox.tscn::PackedScene::-1::1718399823::0::1::::<><>::
+Hurtbox3D.tscn::PackedScene::-1::1718399823::0::1::::<><>::
+Hurtbox.tscn::PackedScene::-1::1718399823::0::1::::<><>::
+::res://Levels/::1718399823
 Campus.gd::GDScript::-1::1718389488::0::1::::<>Node3D<>::
-Campus.tscn::PackedScene::9037877806813643061::1718396339::0::1::::<><>::res://Levels/Campus.gd<>uid://cxr2wme6fewnt<>uid://cn486gdo2uadr<>uid://beo51o8nxrmeb<>res://NPC/Dialogue.tscn<>uid://kjstdntlyraj<>res://Shaders/Clouds2D/CloudShadow.tscn
-::res://Main Menu/::1718396470
+Campus.tscn::PackedScene::9037877806813643061::1718399823::0::1::::<><>::res://Levels/Campus.gd<>uid://cxr2wme6fewnt::::res://Enemy/starship.tscn<>uid://cn486gdo2uadr::::res://QuadGround.png<>uid://beo51o8nxrmeb::::res://Player/3DPlayer.tscn<>res://NPC/Dialogue.tscn<>uid://kjstdntlyraj::::res://SceneObjects/Tree.tscn<>res://Shaders/Clouds2D/CloudShadow.tscn
+::res://Main Menu/::1718399823
 Menu.gd::GDScript::-1::1718396470::0::1::::<>Node3D<>::
-Menu.tscn::PackedScene::341007575283086101::1718396470::0::1::::<><>::res://Main Menu/Menu.gd<>uid://ced3bov6f1ss2<>uid://d11ar6ikff8dt<>uid://d2n6ufchu4d8k<>uid://bfxo6wvf6nggx<>uid://dsdfknk26nk36<>uid://ddtp323r4duc6<>uid://ds0eweg8jphs4<>uid://kjstdntlyraj<>uid://08hi4ibybgpw<>uid://bjnnics3h73xk<>uid://cnreo6jogxxnd<>uid://485h88o13ng5<>uid://ckagupus6clnt<>uid://2m6wyih7rwrg<>uid://cn486gdo2uadr<>uid://bcvbxarnx5ju7<>uid://b5ace4fwd2ll3
+Menu.tscn::PackedScene::341007575283086101::1718399823::0::1::::<><>::res://Main Menu/Menu.gd<>uid://ced3bov6f1ss2::::res://UI/TitleArt.png<>uid://d11ar6ikff8dt::::res://Levels/Campus.tscn<>uid://d2n6ufchu4d8k::::res://Vox/tree.vox<>uid://bfxo6wvf6nggx::::res://Vox/menu_play.vox<>uid://dsdfknk26nk36::::res://Vox/menu_quit.vox<>uid://ddtp323r4duc6::::res://Vox/6.vox<>uid://ds0eweg8jphs4::::res://Vox/2.vox<>uid://kjstdntlyraj::::res://SceneObjects/Tree.tscn<>uid://08hi4ibybgpw::::res://Vox/starship.vox<>uid://bjnnics3h73xk::::res://Vox/3.vox<>uid://cnreo6jogxxnd::::res://Vox/5.vox<>uid://485h88o13ng5::::res://Vox/7.vox<>uid://ckagupus6clnt::::res://Vox/rock.vox<>uid://2m6wyih7rwrg::::res://Shaders/Clouds2D/CloudsVisible.tres<>uid://cn486gdo2uadr::::res://QuadGround.png<>uid://bcvbxarnx5ju7::::res://SceneObjects/Grass.tscn<>uid://b5ace4fwd2ll3::::res://Particles/particles-single.png
 Play Button.gd::GDScript::-1::1718389489::0::1::::<>MeshInstance3D<>::
 ::res://Music and Sounds/::1718390230
 EnemyDie.wav::AudioStreamWAV::4270392055003720440::1718389465::1718390230::1::::<><>::
@@ -64,20 +64,20 @@ Music.mp3::AudioStreamMP3::374936163115037931::1718389465::1718390230::1::::<><>
 Pause.wav::AudioStreamWAV::6215254297926996265::1718389465::1718390230::1::::<><>::
 Swipe.wav::AudioStreamWAV::1020656636350759288::1718389465::1718390230::1::::<><>::
 Unpause.wav::AudioStreamWAV::2367140989012207537::1718389465::1718390230::1::::<><>::
-::res://NPC/::1718396019
-Dialogue.gd::GDScript::-1::1718389489::0::1::::<>Control<>::
+::res://NPC/::1718399823
+Dialogue.gd::GDScript::-1::1718399823::0::1::::<>Control<>::
 dialogue.json::JSON::-1::1718389465::0::1::::<><>::
-Dialogue.tscn::PackedScene::-1::1718390230::0::1::::<><>::uid://doyywg6dbgwkc<>res://Fonts/m5x7.tres<>res://Fonts/m6x11.tres<>uid://jbxh1h607bln<>res://NPC/Dialogue.gd
+Dialogue.tscn::PackedScene::-1::1718399823::0::1::::<><>::uid://doyywg6dbgwkc<>res://Fonts/m5x7.tres<>res://Fonts/m6x11.tres<>uid://jbxh1h607bln<>res://NPC/Dialogue.gd
 F.R.O.G.Happy.png::CompressedTexture2D::635174339751214647::1718389465::1718390230::1::::<><>::
 FrogGirlDialogue.png::CompressedTexture2D::8192947786568435982::1718389465::1718390230::1::::<><>::
 FrogGirlSprite.png::CompressedTexture2D::3854803050169294908::1718389465::1718390230::1::::<><>::
-NPC.tscn::PackedScene::-1::1718390230::0::1::::<><>::uid://doyywg6dbgwkc<>uid://bu6kbp00i5e4c
+NPC.tscn::PackedScene::-1::1718399823::0::1::::<><>::uid://doyywg6dbgwkc<>uid://bu6kbp00i5e4c
 ::res://Particles/::1718391046
 particles-single.png::CompressedTexture2D::4492216101901064006::1718389465::1718391046::1::::<><>::
 texture.jpg::CompressedTexture2D::7171270394810798371::1718389465::1718389797::1::::<><>::
-::res://Player/::1718396339
-3DPlayer.gd::GDScript::-1::1718389488::0::1::::<>CharacterBody3D<>::
-3DPlayer.tscn::PackedScene::2697946074154114833::1718396339::0::1::::<><>::uid://d3kfkyxy0taof<>res://Player/3DPlayer.gd<>res://Hitbox and Hurtbox/Hitbox3D.tscn<>uid://cor316xbqlg0p<>uid://bofrprbn4d3fw<>uid://b63xdn8jh2ld7<>uid://u5h8r5fud6b5<>uid://cocb75233o0bp<>uid://1oj6du7nt427<>uid://drok8vhpu82lu<>uid://btnjkkntregta
+::res://Player/::1718399823
+3DPlayer.gd::GDScript::-1::1718396710::0::1::::<>CharacterBody3D<>::
+3DPlayer.tscn::PackedScene::2697946074154114833::1718399823::0::1::::<><>::uid://d3kfkyxy0taof::::res://Player/Sprites/_down idle.png<>res://Player/3DPlayer.gd<>res://Hitbox and Hurtbox/Hitbox3D.tscn<>uid://cor316xbqlg0p::::res://Player/Sprites/_up walk.png<>uid://bofrprbn4d3fw::::res://Player/Sprites/_down walk.png<>uid://b63xdn8jh2ld7::::res://Player/Sprites/_side idle.png<>uid://u5h8r5fud6b5::::res://Player/Sprites/_side walk.png<>uid://cocb75233o0bp::::res://Player/Sprites/_up idle.png<>uid://1oj6du7nt427::::res://Player/Sprites/_down attack.png<>uid://drok8vhpu82lu::::res://Player/Sprites/_side attack.png<>uid://btnjkkntregta::::res://Player/Sprites/_up attack.png
 FrogGirlDialogue-Recovered-export.png::CompressedTexture2D::5626027012544326764::1718389465::1718390230::1::::<><>::
 Player.png::CompressedTexture2D::8924650544733808428::1718389465::1718390230::1::::<><>::
 ::res://Player/Sprites/::1718390230
@@ -91,24 +91,24 @@ _side walk.png::CompressedTexture2D::1466193095025810356::1718389465::1718390230
 _up attack.png::CompressedTexture2D::3747410480694554990::1718389465::1718390230::1::::<><>::
 _up idle.png::CompressedTexture2D::5759733414944910213::1718389465::1718390230::1::::<><>::
 _up walk.png::CompressedTexture2D::5792327770398272945::1718389465::1718390230::1::::<><>::
-::res://SceneObjects/::1718395966
-Grass.tscn::PackedScene::2570252120941261740::1718391298::0::1::::<><>::uid://d0vhbeecwe4vc
-Tree.tscn::PackedScene::721594850652294749::1718391067::0::1::::<><>::uid://d2n6ufchu4d8k
+::res://SceneObjects/::1718399823
+Grass.tscn::PackedScene::2570252120941261740::1718399823::0::1::::<><>::uid://d0vhbeecwe4vc
+Tree.tscn::PackedScene::721594850652294749::1718399823::0::1::::<><>::uid://d2n6ufchu4d8k
 ::res://Shaders/::1718389465
-::res://Shaders/Clouds2D/::1718390960
-CloudShadow.tscn::PackedScene::-1::1718390230::0::1::::<><>::res://Shaders/Clouds2D/CloudsVisible.tscn
-CloudsVisible.tres::ShaderMaterial::1921794098797603464::1718390960::0::1::::<><>::uid://c0dqr4uecmfve
-CloudsVisible.tscn::PackedScene::-1::1718390230::0::1::::<><>::res://Shaders/Clouds2D/CloudsVisible.tres
+::res://Shaders/Clouds2D/::1718399823
+CloudShadow.tscn::PackedScene::-1::1718399823::0::1::::<><>::res://Shaders/Clouds2D/CloudsVisible.tscn
+CloudsVisible.tres::ShaderMaterial::1921794098797603464::1718399823::0::1::::<><>::uid://c0dqr4uecmfve::::res://Shaders/Clouds2D/Portal_08.png
+CloudsVisible.tscn::PackedScene::-1::1718399823::0::1::::<><>::res://Shaders/Clouds2D/CloudsVisible.tres
 Portal_08.png::CompressedTexture2D::6534758976237972706::1718389465::1718390230::1::::<><>::
 ::res://Shadows/::1718390230
 LargeShadow.png::CompressedTexture2D::1141832699775864763::1718389465::1718390230::1::::<><>::
 MediumShadow.png::CompressedTexture2D::2106495995830856403::1718389465::1718390230::1::::<><>::
 SmallShadow.png::CompressedTexture2D::2288474740461885984::1718389465::1718390230::1::::<><>::
-::res://UI/::1718391780
+::res://UI/::1718399823
 HeartUIEmpty.png::CompressedTexture2D::8153391175476295267::1718389465::1718389709::1::::<><>::
 HeartUIFull.png::CompressedTexture2D::5821764208522672421::1718389465::1718389709::1::::<><>::
-TitleArt.png::CompressedTexture2D::5061492505975894791::1718391780::1718391780::1::::<><>::
-::res://Vox/::1718391096
+TitleArt.png::CompressedTexture2D::5061492505975894791::1718399823::1718399823::1::::<><>::
+::res://Vox/::1718399823
 1.vox::Mesh::5744083468409622059::1718390396::1718390396::1::::<><>::
 2.vox::Mesh::8474553056726575429::1718390401::1718390402::1::::<><>::
 3.vox::Mesh::3045760928631389688::1718390471::1718390472::1::::<><>::
@@ -124,7 +124,7 @@ TitleArt.png::CompressedTexture2D::5061492505975894791::1718391780::1718391780::
 13.vox::Mesh::5330194882614183483::1718390519::1718390519::1::::<><>::
 grass.vox::Mesh::8957762096001718144::1718390535::1718390535::1::::<><>::
 menu_play.vox::Mesh::2785752175960137651::1718390524::1718390571::1::::<><>::
-menu_quit.vox::Mesh::8429176512249249079::1718390522::1718390565::1::::<><>::
+menu_quit.vox::Mesh::8429176512249249079::1718390522::1718399823::1::::<><>::
 rock.vox::Mesh::5475130641206918969::1718390547::1718390547::1::::<><>::
 starship.vox::Mesh::1823286397748530388::1718390839::1718391096::1::::<><>::
 tree.vox::Mesh::9083115948815091584::1718390549::1718390550::1::::<><>::

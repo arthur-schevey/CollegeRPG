@@ -1,5 +1,6 @@
-res://Player/3DPlayer.tscn
-res://Shaders/Clouds2D/CloudsVisible.tres
-res://Player/3DPlayer.gd
 res://Main Menu/Menu.tscn
+res://Shaders/Clouds2D/CloudsVisible.tres
 res://Levels/Campus.tscn
+res://Player/3DPlayer.tscn
+res://NPC/Dialogue.tscn
+res://NPC/Dialogue.gd
