@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://New/Hitbox and Hurtbox/Hitbox3D.gd" id="1"]
+
+[node name="Hitbox3D" type="Area3D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]

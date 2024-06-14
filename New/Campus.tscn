@@ -1,0 +1,77 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Texture2D" uid="uid://c8v4qj21eyo68" path="res://New/Ground.png" id="1"]
+[ext_resource type="PackedScene" path="res://New/Player/3DPlayer.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://New/Starship.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://New/Tree.tscn" id="4"]
+[ext_resource type="Script" path="res://New/Campus.gd" id="5"]
+[ext_resource type="PackedScene" path="res://New/Shaders/Clouds2D/CloudShadow.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://New/WorldEnvironment.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://New/Sun.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://New/NPC/Dialogue.tscn" id="9"]
+[ext_resource type="Material" path="res://New/Shaders/Clouds2D/CloudsVisible.tres" id="10"]
+
+[sub_resource type="QuadMesh" id=1]
+
+[sub_resource type="StandardMaterial3D" id=2]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="BoxShape3D" id=7]
+size = Vector3( 10, 1, 10 )
+
+[sub_resource type="QuadMesh" id=13]
+
+[node name="Campus" type="Node3D"]
+script = ExtResource( 5 )
+speed = 100
+
+[node name="Post Processing" parent="." instance=ExtResource( 7 )]
+
+[node name="Sun" parent="." instance=ExtResource( 8 )]
+transform = Transform3D( 0.921505, 0.235161, -0.309075, 0.0946882, 0.635775, 0.766044, 0.376646, -0.73518, 0.563603, 0, 3.87753, 0 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Starship" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform3D( -0.0220697, 0, 0.0975342, 0, 0.1, 0, -0.0975342, 0, -0.0220697, 0, 0.0295615, -0.15656 )
+
+[node name="Starship2" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform3D( -0.0906307, 0, -0.0422619, 0, 0.1, 0, 0.0422619, 0, -0.0906307, 1.37644, 0.0295615, 0 )
+
+[node name="Starship3" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform3D( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 1.2389, 0.00653511, -3.13222 )
+
+[node name="Starship4" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform3D( 0.083867, 0, 0.054464, 0, 0.1, 0, -0.054464, 0, 0.083867, 0, 0.0295615, 0.961935 )
+
+[node name="Starship5" parent="Enemies" instance=ExtResource( 3 )]
+transform = Transform3D( 0.0951056, 0, 0.0309017, 0, 0.1, 0, -0.0309017, 0, 0.0951056, -0.463246, 0.0295615, 0.420157 )
+
+[node name="3DPlayer" parent="." instance=ExtResource( 2 )]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580755, 0.209955, 0 )
+
+[node name="Dialogue" parent="3DPlayer" instance=ExtResource( 9 )]
+textSpeed = 0.1
+
+[node name="Plane" type="StaticBody3D" parent="."]
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Plane"]
+transform = Transform3D( 20, 0, 0, 0, -1.74846e-06, 1, 0, -40, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.933422, 0 )
+shape = SubResource( 7 )
+
+[node name="Tree" parent="." instance=ExtResource( 4 )]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95821, -1.90735e-06, 0.201358 )
+
+[node name="Clouds" parent="." instance=ExtResource( 6 )]
+transform = Transform3D( 20, 0, 0, 0, -8.74228e-07, 1, 0, -20, -4.37114e-08, -0.00295663, 1.85508, -0.32061 )
+material_override = ExtResource( 10 )
+cast_shadow = 3
+mesh = SubResource( 13 )
+
+[editable path="Post Processing"]

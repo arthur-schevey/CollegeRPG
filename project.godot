@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="CollegeRPG"
-run/main_scene="res://Old/World/Campus.tscn"
+run/main_scene="res://New/Campus.tscn"
 config/features=PackedStringArray("4.0")
-config/icon="res://Old/UI/HeartUIFull.png"
+config/icon="res://UI/HeartUIFull.png"
 
 [display]
 
