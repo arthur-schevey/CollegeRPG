@@ -1,15 +1,7 @@
-res://Enemy/starship.tscn
-res://Hitbox and Hurtbox/Hitbox3D.tscn
-res://Hitbox and Hurtbox/Hitbox.tscn
-res://Hitbox and Hurtbox/Hurtbox3D.tscn
-res://Hitbox and Hurtbox/Hurtbox.tscn
 res://Levels/Campus.tscn
-res://Main Menu/Menu.tscn
-res://NPC/Dialogue.tscn
-res://NPC/NPC.tscn
-res://Player/3DPlayer.tscn
-res://SceneObjects/Grass.tscn
-res://SceneObjects/Tree.tscn
-res://Shaders/Clouds2D/CloudShadow.tscn
-res://Shaders/Clouds2D/CloudsVisible.tscn
 res://Shaders/Clouds2D/CloudsVisible.tres
+res://Player/Player.tscn
+res://NPC/Dialogue.tscn
+res://addons/phantom_camera/examples/example_scenes/2D/sub_scenes/2d_example_scene.tscn
+res://addons/phantom_camera/examples/example_scenes/2D/2d_follow_framed_example_scene.tscn
+res://addons/phantom_camera/examples/example_scenes/2D/2d_follow_group_example_scene.tscn

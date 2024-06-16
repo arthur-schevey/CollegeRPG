@@ -16,12 +16,13 @@ func _ready():
 	pass
 
 func _process(_delta):
+	pass
 	#$Indicator.visible = finished
-	if Input.is_action_just_pressed("next_dialogue"):
-		if finished:
-			nextPhrase()
-		else:
-			$Text.visible_characters = len($Text.text)
+	#if Input.is_action_just_pressed("next_dialogue"):
+		#if finished:
+			#nextPhrase()
+		#else:
+			#$Text.visible_characters = len($Text.text)
 
 func getDialog() -> Array:
 #	var f = File.new()
